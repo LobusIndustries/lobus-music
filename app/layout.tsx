@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { genres, comparableArtists, soundDescription } from "@/lib/artistInfo";
 
 const displayFont = Anton({
   variable: "--font-display",
@@ -13,8 +14,7 @@ const bodyFont = Space_Grotesk({
   subsets: ["latin"],
 });
 
-const siteDescription =
-  "LOBUS — official site. Stream the music on Spotify, SoundCloud, and Apple Music, watch videos on YouTube, and follow on Instagram and TikTok.";
+const siteDescription = `LOBUS — ${soundDescription} Stream on Spotify, SoundCloud, and Apple Music, watch videos on YouTube, and follow on Instagram and TikTok.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lobusmusic.com"),
@@ -32,6 +32,11 @@ export const metadata: Metadata = {
     "Lobus Apple Music",
     "Lobus YouTube",
     "new music",
+    ...genres.map((g) => g.toLowerCase()),
+    ...comparableArtists.map((a) => `music like ${a}`),
+    "new alternative rock music",
+    "new emo music",
+    "new indie rock music",
   ],
   applicationName: "LOBUS",
   authors: [{ name: "LOBUS" }],

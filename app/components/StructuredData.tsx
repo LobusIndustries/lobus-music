@@ -1,5 +1,6 @@
 import { links } from "@/lib/links";
 import { discography } from "@/lib/discography";
+import { genres, soundDescription } from "@/lib/artistInfo";
 
 export default function StructuredData() {
   const releases = discography.filter((r) => !r.presave);
@@ -10,7 +11,8 @@ export default function StructuredData() {
     name: "Lobus",
     alternateName: "LOBUS",
     url: "https://lobusmusic.com",
-    genre: ["Electronic", "Hip Hop", "Alternative"],
+    description: `LOBUS — ${soundDescription}`,
+    genre: genres,
     sameAs: links.map((l) => l.url),
     album: releases.map((r) => ({
       "@type": "MusicAlbum",
@@ -25,8 +27,7 @@ export default function StructuredData() {
     "@type": "WebSite",
     name: "LOBUS",
     url: "https://lobusmusic.com",
-    description:
-      "Official site for LOBUS — stream music, watch videos, and follow on social media.",
+    description: `Official site for LOBUS — ${soundDescription}`,
   };
 
   return (
