@@ -30,6 +30,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://lobus-music.vercel.app/sitemap.xml",
+    sitemap: "https://lobusmusic.com/sitemap.xml",
   };
 }

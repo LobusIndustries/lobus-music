@@ -9,7 +9,7 @@ export default function StructuredData() {
     "@type": "MusicGroup",
     name: "Lobus",
     alternateName: "LOBUS",
-    url: "https://lobus-music.vercel.app",
+    url: "https://lobusmusic.com",
     genre: ["Electronic", "Hip Hop", "Alternative"],
     sameAs: links.map((l) => l.url),
     album: releases.map((r) => ({
@@ -24,7 +24,7 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "LOBUS",
-    url: "https://lobus-music.vercel.app",
+    url: "https://lobusmusic.com",
     description:
       "Official site for LOBUS — stream music, watch videos, and follow on social media.",
   };

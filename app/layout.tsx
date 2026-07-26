@@ -17,7 +17,7 @@ const siteDescription =
   "LOBUS — official site. Stream the music on Spotify, SoundCloud, and Apple Music, watch videos on YouTube, and follow on Instagram and TikTok.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lobus-music.vercel.app"),
+  metadataBase: new URL("https://lobusmusic.com"),
   title: {
     default: "LOBUS",
     template: "%s — LOBUS",
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
   authors: [{ name: "LOBUS" }],
   category: "music",
   alternates: {
-    canonical: "https://lobus-music.vercel.app",
+    canonical: "https://lobusmusic.com",
   },
   openGraph: {
     title: "LOBUS",
     description: siteDescription,
     type: "website",
     siteName: "LOBUS",
-    url: "https://lobus-music.vercel.app",
+    url: "https://lobusmusic.com",
   },
   twitter: {
     card: "summary_large_image",
