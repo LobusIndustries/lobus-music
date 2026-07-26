@@ -9,7 +9,6 @@ import Discography from "./components/Discography";
 import Reveal from "./components/Reveal";
 import StructuredData from "./components/StructuredData";
 import SoundToggle from "./components/SoundToggle";
-import { soundDescription } from "@/lib/artistInfo";
 
 const TICKER_WORDS = ["LOBUS", "NEW MUSIC OUT NOW", "STREAM EVERYWHERE", "LOBUS"];
 
@@ -30,16 +29,23 @@ export default function Home() {
               new sounds, out now &mdash; stream everywhere.
             </p>
           </Reveal>
-          <Reveal delay={280}>
-            <p className="max-w-xl text-balance text-sm uppercase tracking-[0.2em] text-white/40 sm:text-base">
-              {soundDescription}
-            </p>
-          </Reveal>
           <Reveal delay={350}>
             <Waveform />
           </Reveal>
           <Reveal delay={450} className="animate-bounce text-white/40">
-            <span className="text-sm uppercase tracking-[0.4em]">scroll</span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
           </Reveal>
         </section>
 
