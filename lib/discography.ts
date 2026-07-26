@@ -68,7 +68,7 @@ export const discography: Release[] = [
   },
   {
     title: "Stranger",
-    type: "Album",
+    type: "Single",
     year: "2023",
     url: "https://open.spotify.com/album/0xdz0OqHxPqGqxlPTneuMD",
   },
