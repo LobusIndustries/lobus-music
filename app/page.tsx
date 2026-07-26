@@ -5,6 +5,7 @@ import GlitchTitle from "./components/GlitchTitle";
 import Marquee from "./components/Marquee";
 import Waveform from "./components/Waveform";
 import LinksGrid from "./components/LinksGrid";
+import Discography from "./components/Discography";
 import Reveal from "./components/Reveal";
 import StructuredData from "./components/StructuredData";
 import SoundToggle from "./components/SoundToggle";
@@ -37,6 +38,22 @@ export default function Home() {
         </section>
 
         <Marquee items={TICKER_WORDS} />
+
+        <section
+          id="discography"
+          className="flex w-full flex-col items-center gap-12 px-6 py-32"
+        >
+          <Reveal>
+            <h2 className="text-center text-[clamp(2rem,6vw,4rem)] font-black uppercase tracking-tight mix-blend-difference text-white">
+              Discography
+            </h2>
+          </Reveal>
+          <Reveal delay={150} className="w-full flex justify-center">
+            <Discography />
+          </Reveal>
+        </section>
+
+        <Marquee items={TICKER_WORDS} reverse speed={25} />
 
         <section
           id="links"
