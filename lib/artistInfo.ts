@@ -1,4 +1,4 @@
-export const genres = ["Alternative Rock", "Indie", "Emo", "Post-Grunge"];
+export const genres = ["Alternative Rock", "Emo", "Indie", "Post-Grunge"];
 
 export const comparableArtists = ["Chauncy", "Lil Peep"];
 
