@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Space_Grotesk } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { genres, comparableArtists, soundDescription } from "@/lib/artistInfo";
 import ShaderBackground from "./components/ShaderBackground";
@@ -91,6 +93,8 @@ export default function RootLayout({
         <Noise />
         <SoundToggle />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

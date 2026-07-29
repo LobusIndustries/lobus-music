@@ -3,6 +3,7 @@ import Marquee from "./components/Marquee";
 import Waveform from "./components/Waveform";
 import LinksGrid from "./components/LinksGrid";
 import Discography from "./components/Discography";
+import FAQ from "./components/FAQ";
 import Reveal from "./components/Reveal";
 
 const TICKER_WORDS = ["LOBUS", "NEW MUSIC OUT NOW", "STREAM EVERYWHERE", "LOBUS"];
@@ -70,6 +71,20 @@ export default function Home() {
       </section>
 
       <Marquee items={TICKER_WORDS} reverse speed={22} />
+
+      <section
+        id="faq"
+        className="flex w-full flex-col items-center gap-12 px-6 py-32"
+      >
+        <Reveal>
+          <h2 className="text-center text-[clamp(2rem,6vw,4rem)] font-black uppercase tracking-tight mix-blend-difference text-white">
+            FAQ
+          </h2>
+        </Reveal>
+        <Reveal delay={150} className="w-full flex justify-center">
+          <FAQ />
+        </Reveal>
+      </section>
 
       <footer className="flex w-full flex-col items-center gap-2 px-6 py-16 text-center text-sm text-white/40">
         <p>&copy; {new Date().getFullYear()} LOBUS. All rights reserved.</p>
