@@ -15,7 +15,7 @@ export default function Home() {
         <GlitchTitle />
         <Reveal delay={200}>
           <p className="max-w-xl text-balance text-lg text-white/70 sm:text-xl">
-            stream everywhere &mdash; alternative rock/emo/indie
+            stream everywhere &middot; alternative rock/emo/indie
           </p>
         </Reveal>
         <Reveal delay={350}>

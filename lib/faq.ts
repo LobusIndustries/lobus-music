@@ -47,7 +47,7 @@ export const faqItems: FaqItem[] = [
   },
   {
     question: "What genre is Lobus?",
-    answer: `Lobus's music spans ${genreListNatural} — genres that share roots in guitar-driven, emotionally direct rock. The discography reflects that full range across ${releasedTracks.length} releases since ${earliestYear}.`,
+    answer: `Lobus's music spans ${genreListNatural}, genres that share roots in guitar-driven, emotionally direct rock. The discography reflects that full range across ${releasedTracks.length} releases since ${earliestYear}.`,
   },
   {
     question: "Where can I stream Lobus?",

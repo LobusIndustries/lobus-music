@@ -27,8 +27,8 @@ export default function Waveform() {
         barRefs.current.forEach((el, i) => {
           if (!el) return;
           if (!wasRunning) el.style.animation = "none";
-          // Perceptual (power-curve) mapping so low-frequency energy — where
-          // this ambient bed lives — spreads across more bars instead of
+          // Perceptual (power-curve) mapping so low-frequency energy, where
+          // this ambient bed lives, spreads across more bars instead of
           // collapsing into the first couple of linear bins.
           const t = i / (BAR_COUNT - 1);
           const idx = Math.min(bins - 1, Math.floor(t ** 2.2 * bins));

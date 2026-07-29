@@ -11,7 +11,7 @@ export default function StructuredData() {
     name: "Lobus",
     alternateName: "LOBUS",
     url: "https://lobusmusic.com",
-    description: `LOBUS — ${soundDescription}`,
+    description: `LOBUS. ${soundDescription}`,
     genre: genres,
     sameAs: links.map((l) => l.url),
     album: releases.map((r) => ({
@@ -27,7 +27,7 @@ export default function StructuredData() {
     "@type": "WebSite",
     name: "LOBUS",
     url: "https://lobusmusic.com",
-    description: `Official site for LOBUS — ${soundDescription}`,
+    description: `Official site for LOBUS. ${soundDescription}`,
   };
 
   return (

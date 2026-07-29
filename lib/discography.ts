@@ -10,7 +10,7 @@ export interface Release {
   lyrics?: string;
 }
 
-// Sourced from https://open.spotify.com/artist/1ac1KQ6uUiOnXTau8cfJeb — keep in
+// Sourced from https://open.spotify.com/artist/1ac1KQ6uUiOnXTau8cfJeb, keep in
 // sync with the artist page if new releases drop.
 export const discography: Release[] = [
   {

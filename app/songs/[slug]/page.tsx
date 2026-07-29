@@ -23,10 +23,10 @@ export async function generateMetadata({
   if (!release) return {};
 
   const description = release.presave
-    ? `"${release.title}" by LOBUS — releasing ${release.presaveLabel}. Presave now.`
+    ? `"${release.title}" by LOBUS. Releasing ${release.presaveLabel}. Presave now.`
     : release.lyrics
-      ? `${release.title} by LOBUS — lyrics, and where to stream (${release.type}, ${release.year}).`
-      : `${release.title} by LOBUS — ${release.type}, ${release.year}. Stream now.`;
+      ? `${release.title} by LOBUS. Lyrics, and where to stream (${release.type}, ${release.year}).`
+      : `${release.title} by LOBUS. ${release.type}, ${release.year}. Stream now.`;
 
   return {
     title: release.title,
@@ -35,14 +35,14 @@ export async function generateMetadata({
       canonical: `https://lobusmusic.com/songs/${release.slug}`,
     },
     openGraph: {
-      title: `${release.title} — LOBUS`,
+      title: `${release.title} · LOBUS`,
       description,
       type: "music.song",
       url: `https://lobusmusic.com/songs/${release.slug}`,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${release.title} — LOBUS`,
+      title: `${release.title} · LOBUS`,
       description,
     },
   };

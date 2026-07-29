@@ -21,13 +21,13 @@ const bodyFont = Space_Grotesk({
   subsets: ["latin"],
 });
 
-const siteDescription = `LOBUS — ${soundDescription} Stream on Spotify, SoundCloud, and Apple Music, watch videos on YouTube, and follow on Instagram and TikTok.`;
+const siteDescription = `LOBUS. ${soundDescription} Stream on Spotify, SoundCloud, and Apple Music, watch videos on YouTube, and follow on Instagram and TikTok.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lobusmusic.com"),
   title: {
     default: "LOBUS",
-    template: "%s — LOBUS",
+    template: "%s · LOBUS",
   },
   description: siteDescription,
   keywords: [

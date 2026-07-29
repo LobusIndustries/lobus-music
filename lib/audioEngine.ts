@@ -41,7 +41,7 @@ export function startAmbient() {
   filter.type = "lowpass";
   filter.frequency.value = 1400;
 
-  // Moody, slowly drifting chord — a generative ambient bed, not a fixed loop.
+  // Moody, slowly drifting chord: a generative ambient bed, not a fixed loop.
   const chord = [98, 146.83, 174.61, 220];
   liveNodes = [];
 
@@ -67,7 +67,7 @@ export function startAmbient() {
 
     liveNodes.push(osc, lfo, lfoGain, oscGain);
 
-    // Octave-up shimmer partial — spreads spectral energy higher so the
+    // Octave-up shimmer partial, spreads spectral energy higher so the
     // visualizer isn't just a single dense low bin.
     const shimmer = ctx!.createOscillator();
     shimmer.type = "sine";
