@@ -2,6 +2,11 @@ import type { Metadata, Viewport } from "next";
 import { Anton, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { genres, comparableArtists, soundDescription } from "@/lib/artistInfo";
+import ShaderBackground from "./components/ShaderBackground";
+import CursorTrail from "./components/CursorTrail";
+import Noise from "./components/Noise";
+import SoundToggle from "./components/SoundToggle";
+import StructuredData from "./components/StructuredData";
 
 const displayFont = Anton({
   variable: "--font-display",
@@ -80,6 +85,11 @@ export default function RootLayout({
       className={`${displayFont.variable} ${bodyFont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#050307] text-white font-body overflow-x-hidden">
+        <StructuredData />
+        <ShaderBackground />
+        <CursorTrail />
+        <Noise />
+        <SoundToggle />
         {children}
       </body>
     </html>

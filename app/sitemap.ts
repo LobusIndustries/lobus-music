@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { discography } from "@/lib/discography";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -14,5 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    ...discography.map((release) => ({
+      url: `https://lobusmusic.com/songs/${release.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 }

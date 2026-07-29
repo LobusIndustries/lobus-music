@@ -1,14 +1,13 @@
+import Link from "next/link";
 import { discography } from "@/lib/discography";
 
 export default function Discography() {
   return (
     <div className="w-full max-w-3xl">
       {discography.map((release, i) => (
-        <a
-          key={release.title + release.year}
-          href={release.url}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          key={release.slug}
+          href={`/songs/${release.slug}`}
           className="group relative flex items-center gap-4 border-b border-white/10 py-5 first:border-t"
         >
           <div
@@ -46,7 +45,7 @@ export default function Discography() {
           <span className="shrink-0 text-white/30 transition-all duration-200 group-hover:translate-x-1 group-hover:text-white">
             &#8594;
           </span>
-        </a>
+        </Link>
       ))}
     </div>
   );
