@@ -1,5 +1,5 @@
 import { discography } from "./discography";
-import { genres, comparableArtists, soundDescription } from "./artistInfo";
+import { genres, soundDescription } from "./artistInfo";
 import { links } from "./links";
 
 export interface FaqItem {
@@ -24,7 +24,7 @@ export const faqItems: FaqItem[] = [
   },
   {
     question: "What genre is Lobus?",
-    answer: `${genres.join(", ")} — for fans of ${comparableArtists.join(" and ")}.`,
+    answer: `${genres.join(", ")}.`,
   },
   {
     question: "Where can I stream Lobus?",

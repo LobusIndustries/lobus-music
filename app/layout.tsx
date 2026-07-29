@@ -3,7 +3,7 @@ import { Anton, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
-import { genres, comparableArtists, soundDescription } from "@/lib/artistInfo";
+import { genres, soundDescription } from "@/lib/artistInfo";
 import ShaderBackground from "./components/ShaderBackground";
 import CursorTrail from "./components/CursorTrail";
 import Noise from "./components/Noise";
@@ -40,7 +40,6 @@ export const metadata: Metadata = {
     "Lobus YouTube",
     "new music",
     ...genres.map((g) => g.toLowerCase()),
-    ...comparableArtists.map((a) => `music like ${a}`),
     "new alternative rock music",
     "new emo music",
     "new indie rock music",
