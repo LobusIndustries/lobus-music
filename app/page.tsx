@@ -3,6 +3,7 @@ import Marquee from "./components/Marquee";
 import Waveform from "./components/Waveform";
 import LinksGrid from "./components/LinksGrid";
 import Discography from "./components/Discography";
+import Notes from "./components/Notes";
 import FAQ from "./components/FAQ";
 import Reveal from "./components/Reveal";
 
@@ -76,6 +77,20 @@ export default function Home() {
         </Reveal>
         <Reveal delay={150} className="w-full flex justify-center">
           <Discography />
+        </Reveal>
+      </section>
+
+      <section
+        id="notes"
+        className="flex w-full flex-col items-center gap-12 px-6 py-32"
+      >
+        <Reveal>
+          <h2 className="text-center text-[clamp(2rem,6vw,4rem)] font-black uppercase tracking-tight mix-blend-difference text-white">
+            Notes
+          </h2>
+        </Reveal>
+        <Reveal delay={150} className="w-full flex justify-center">
+          <Notes />
         </Reveal>
       </section>
 
