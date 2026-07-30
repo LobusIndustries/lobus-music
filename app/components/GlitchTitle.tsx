@@ -12,6 +12,7 @@ export default function GlitchTitle() {
   useEffect(() => {
     const wrap = wrapRef.current;
     if (!wrap) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     let mouseX = -9999;
     let mouseY = -9999;

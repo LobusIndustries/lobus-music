@@ -126,6 +126,10 @@ export default function ShaderBackground() {
     const container = containerRef.current;
     if (!container) return;
 
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
 
@@ -188,6 +192,18 @@ export default function ShaderBackground() {
 
     resize();
     window.addEventListener("resize", resize);
+
+    if (reduceMotion) {
+      renderer.render(scene, camera);
+      return () => {
+        window.removeEventListener("resize", resize);
+        geometry.dispose();
+        material.dispose();
+        renderer.dispose();
+        container?.removeChild(renderer.domElement);
+      };
+    }
+
     window.addEventListener("pointermove", onPointerMove);
     window.addEventListener("pointerleave", onPointerLeave);
     window.addEventListener("pointerdown", onPointerDown);

@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { genres, soundDescription } from "@/lib/artistInfo";
-import ShaderBackground from "./components/ShaderBackground";
+import ShaderBackgroundLoader from "./components/ShaderBackgroundLoader";
 import CursorTrail from "./components/CursorTrail";
 import Noise from "./components/Noise";
 import SoundToggle from "./components/SoundToggle";
@@ -87,7 +87,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-[#050307] text-white font-body overflow-x-hidden">
         <StructuredData />
-        <ShaderBackground />
+        <ShaderBackgroundLoader />
         <CursorTrail />
         <Noise />
         <SoundToggle />
