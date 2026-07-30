@@ -55,7 +55,7 @@ export default function Marquee({
         {content.map((item, i) => (
           <span
             key={i}
-            className="text-sm sm:text-base font-semibold uppercase tracking-[0.35em] text-white"
+            className="text-sm sm:text-base font-semibold uppercase tracking-[0.35em] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]"
           >
             {item} <span className="opacity-40">&#9679;</span>
           </span>

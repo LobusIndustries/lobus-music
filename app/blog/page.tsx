@@ -24,7 +24,7 @@ export default function BlogIndexPage() {
         <Reveal>
           <Link
             href="/"
-            className="mb-10 inline-flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-white"
+            className="mb-10 inline-flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]"
           >
             &larr; LOBUS
           </Link>
@@ -43,7 +43,7 @@ export default function BlogIndexPage() {
               href={`/blog/${post.slug}`}
               className="group block border-b border-white/10 py-6 first:border-t"
             >
-              <p className="text-xs uppercase tracking-[0.3em] text-white/40">
+              <p className="text-xs uppercase tracking-[0.3em] text-white/40 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
                 {new Date(post.date).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",
@@ -51,10 +51,10 @@ export default function BlogIndexPage() {
                   timeZone: "UTC",
                 })}
               </p>
-              <h2 className="mt-2 text-xl font-bold text-white transition-transform duration-200 group-hover:-translate-x-[2px] sm:text-2xl">
+              <h2 className="mt-2 text-xl font-bold text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.8)] transition-transform duration-200 group-hover:-translate-x-[2px] sm:text-2xl">
                 {post.title}
               </h2>
-              <p className="mt-2 text-white/60">{post.excerpt}</p>
+              <p className="mt-2 text-white/60 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">{post.excerpt}</p>
             </Link>
           ))}
         </Reveal>

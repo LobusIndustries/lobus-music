@@ -101,7 +101,7 @@ export default async function SongPage({
         <Reveal>
           <Link
             href="/"
-            className="mb-10 inline-flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-white"
+            className="mb-10 inline-flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]"
           >
             &larr; LOBUS
           </Link>
@@ -134,7 +134,7 @@ export default async function SongPage({
                 Presave &middot; {release.presaveLabel}
               </span>
             ) : (
-              <span className="text-sm text-white/50">
+              <span className="text-sm text-white/50 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
                 {release.type} &middot; {release.year}
               </span>
             )}
@@ -171,7 +171,7 @@ export default async function SongPage({
           <Reveal delay={300} className="mt-8">
             <Link
               href={`/blog/${relatedPost.slug}`}
-              className="inline-flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-white"
+              className="inline-flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]"
             >
               Read the story behind this song
               <span aria-hidden="true">&rarr;</span>
@@ -181,17 +181,17 @@ export default async function SongPage({
 
         {release.lyrics && (
           <Reveal delay={320} className="mt-16">
-            <h2 className="mb-6 text-sm font-semibold uppercase tracking-[0.3em] text-white/40">
+            <h2 className="mb-6 text-sm font-semibold uppercase tracking-[0.3em] text-white/40 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
               Lyrics
             </h2>
-            <p className="whitespace-pre-line text-lg leading-relaxed text-white/80">
+            <p className="whitespace-pre-line text-lg leading-relaxed text-white/80 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
               {release.lyrics}
             </p>
           </Reveal>
         )}
 
         <Reveal delay={380} className="mt-20">
-          <h2 className="mb-6 text-sm font-semibold uppercase tracking-[0.3em] text-white/40">
+          <h2 className="mb-6 text-sm font-semibold uppercase tracking-[0.3em] text-white/40 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
             Follow LOBUS
           </h2>
           <LinksGrid />

@@ -40,7 +40,7 @@ export default function Home() {
       <section className="flex min-h-screen w-full flex-col items-center justify-center gap-10 px-6 text-center">
         <GlitchTitle />
         <Reveal delay={200}>
-          <p className="max-w-xl text-balance text-lg text-white/70 sm:text-xl">
+          <p className="max-w-xl text-balance text-lg text-white/70 sm:text-xl [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
             stream everywhere &middot; alternative rock/emo/indie
           </p>
         </Reveal>
@@ -126,7 +126,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <footer className="flex w-full flex-col items-center gap-2 px-6 py-16 text-center text-sm text-white/40">
+      <footer className="flex w-full flex-col items-center gap-2 px-6 py-16 text-center text-sm text-white/40 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
         <p>&copy; {new Date().getFullYear()} LOBUS. All rights reserved.</p>
       </footer>
     </main>

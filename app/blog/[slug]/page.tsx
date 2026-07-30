@@ -87,7 +87,7 @@ export default async function BlogPostPage({
         <Reveal>
           <Link
             href="/blog"
-            className="mb-10 inline-flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-white"
+            className="mb-10 inline-flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]"
           >
             &larr; Notes
           </Link>
@@ -112,7 +112,7 @@ export default async function BlogPostPage({
         </Reveal>
 
         <Reveal delay={150}>
-          <p className="mt-4 text-sm text-white/50">
+          <p className="mt-4 text-sm text-white/50 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
             {new Date(post.date).toLocaleDateString("en-US", {
               year: "numeric",
               month: "long",
@@ -123,7 +123,7 @@ export default async function BlogPostPage({
         </Reveal>
 
         <Reveal delay={220} className="mt-10">
-          <div className="space-y-6 text-lg leading-relaxed text-white/80">
+          <div className="space-y-6 text-lg leading-relaxed text-white/80 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
             {post.body.split("\n\n").map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
             ))}

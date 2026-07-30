@@ -33,7 +33,7 @@ export default function Discography() {
           )}
 
           <span className="relative flex-1 truncate">
-            <span className="text-xl font-bold tracking-tight text-white transition-transform duration-200 group-hover:-translate-x-[2px] sm:text-2xl">
+            <span className="text-xl font-bold tracking-tight text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.8)] transition-transform duration-200 group-hover:-translate-x-[2px] sm:text-2xl">
               {release.title}
             </span>
             <span
@@ -50,7 +50,7 @@ export default function Discography() {
               Presave &middot; {release.presaveLabel}
             </span>
           ) : (
-            <span className="shrink-0 text-sm text-white/50">
+            <span className="shrink-0 text-sm text-white/50 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
               {release.type} &middot; {release.year}
             </span>
           )}

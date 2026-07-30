@@ -10,7 +10,7 @@ export default function Notes() {
           href={`/blog/${post.slug}`}
           className="group relative flex flex-col gap-1 border-b border-white/10 py-6 first:border-t"
         >
-          <span className="text-xs uppercase tracking-[0.3em] text-white/40">
+          <span className="text-xs uppercase tracking-[0.3em] text-white/40 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
             {new Date(post.date).toLocaleDateString("en-US", {
               year: "numeric",
               month: "long",
@@ -18,16 +18,16 @@ export default function Notes() {
               timeZone: "UTC",
             })}
           </span>
-          <span className="text-xl font-bold tracking-tight text-white transition-transform duration-200 group-hover:-translate-x-[2px] sm:text-2xl">
+          <span className="text-xl font-bold tracking-tight text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.8)] transition-transform duration-200 group-hover:-translate-x-[2px] sm:text-2xl">
             {post.title}
           </span>
-          <span className="text-white/60">{post.excerpt}</span>
+          <span className="text-white/60 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">{post.excerpt}</span>
         </Link>
       ))}
 
       <Link
         href="/blog"
-        className="mt-8 inline-flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-white"
+        className="mt-8 inline-flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]"
       >
         View all notes
         <span aria-hidden="true">&rarr;</span>
