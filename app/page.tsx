@@ -13,6 +13,8 @@ const TICKER_WORDS_1 = [
   "EMO",
   "INDIE",
   "POST-GRUNGE",
+  "GUITAR-DRIVEN",
+  "EMOTIONALLY DIRECT",
 ];
 const TICKER_WORDS_2 = [
   "LOBUS",
@@ -20,6 +22,7 @@ const TICKER_WORDS_2 = [
   "LISTEN ON APPLE MUSIC",
   "LISTEN ON SOUNDCLOUD",
   "STREAM EVERYWHERE",
+  "AVAILABLE ON ALL PLATFORMS",
 ];
 const TICKER_WORDS_3 = [
   "LOBUS",
@@ -27,6 +30,7 @@ const TICKER_WORDS_3 = [
   "FOLLOW ON INSTAGRAM",
   "FOLLOW ON TIKTOK",
   "WATCH ON YOUTUBE",
+  "BEHIND THE SCENES",
 ];
 
 export default function Home() {
@@ -59,7 +63,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <Marquee items={TICKER_WORDS_1} speed={28} delay={-6} />
+      <Marquee items={TICKER_WORDS_1} pxPerSecond={55} />
 
       <section
         id="discography"
@@ -75,7 +79,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <Marquee items={TICKER_WORDS_2} reverse speed={25} delay={-14} />
+      <Marquee items={TICKER_WORDS_2} reverse pxPerSecond={48} />
 
       <section
         id="links"
@@ -91,7 +95,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <Marquee items={TICKER_WORDS_3} reverse speed={22} delay={-3} />
+      <Marquee items={TICKER_WORDS_3} reverse pxPerSecond={42} />
 
       <section
         id="faq"

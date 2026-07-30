@@ -1,25 +1,55 @@
+"use client";
+
+import { useLayoutEffect, useRef } from "react";
+
 interface MarqueeProps {
   items: string[];
   reverse?: boolean;
-  speed?: number;
-  /** Negative seconds to start the loop already in progress, so it never looks like it "just began." */
-  delay?: number;
+  /** Constant scroll speed in pixels/second, so the repeat interval scales with content length instead of staying fixed. */
+  pxPerSecond?: number;
 }
 
 export default function Marquee({
   items,
   reverse,
-  speed = 28,
-  delay = 0,
+  pxPerSecond = 50,
 }: MarqueeProps) {
+  const trackRef = useRef<HTMLDivElement>(null);
   const content = [...items, ...items, ...items, ...items];
+
+  useLayoutEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      track.style.animation = "none";
+      return;
+    }
+
+    function apply() {
+      const copyWidth = track!.scrollWidth / 4;
+      const duration = (copyWidth * 2) / pxPerSecond;
+      track!.style.animationDuration = `${duration}s`;
+      track!.style.animationDelay = `-${duration / 2}s`;
+    }
+
+    apply();
+    const ro = new ResizeObserver(apply);
+    ro.observe(track);
+    return () => ro.disconnect();
+  }, [pxPerSecond, items]);
+
   return (
     <div className="relative overflow-hidden py-4 mix-blend-difference">
       <div
+        ref={trackRef}
         className="flex w-max shrink-0 gap-8 whitespace-nowrap"
         style={{
-          animation: `${reverse ? "marquee-reverse" : "marquee"} ${speed}s linear infinite`,
-          animationDelay: `${delay}s`,
+          animationName: reverse ? "marquee-reverse" : "marquee",
+          animationTimingFunction: "linear",
+          animationIterationCount: "infinite",
+          animationDuration: "40s",
+          animationDelay: "-20s",
         }}
       >
         {content.map((item, i) => (
