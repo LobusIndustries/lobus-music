@@ -32,6 +32,48 @@ export const discography: Release[] = [
     year: "2026",
     url: "https://open.spotify.com/album/0YSYezpAEF9lwNbjX9clHv",
     coverArt: "/covers/nevermore.jpg",
+    lyrics: `Nevermore that you want to go
+Fall apart at the front door
+Legs collapse you don't want it though
+Lights go dim I'm on the fucking floor
+
+I smoke that loud I loose all control
+My mind go south but I just found my soul
+I'm coming down but you don't got to know
+All about me now cause Im just on a roll I lost control
+
+My baby left me with a burnt picture
+And now I miss her my skin all blistered
+Nevermore that you want from me here's the thing
+I don't care about my life just my friends that I'm leaving
+
+I wrote all my notes but there's one thing I'm leaving
+The love of my life all alone it's the heathen
+Just follow me to death by next season
+I don't know what went wrong I'm off the deep end
+
+I'm off the deep end yeah I'm tweaking
+I get that drug talk every weekend
+God saved my life and he would do it again
+Mom and dad please forgive me for what I did
+
+I'm alone yeah I feel dead in the core
+You call my phone but I'm not here anymore
+God sent me home when I was dead on the floor
+I'm all alone and I'm not breathing no more
+
+Nevermore that you want to go
+Fall apart at the front door
+Legs collapse you don't want it though
+Lights go dim I'm on the fucking floor
+
+I'm on a roll
+I lost control
+I gotta go and find my soul
+I'm on a roll
+I lost control
+I gotta go
+I gotta go.`,
   },
   {
     title: "Fly Away",
@@ -40,6 +82,20 @@ export const discography: Release[] = [
     year: "2025",
     url: "https://open.spotify.com/album/6oePThndVbG1jXPe76srqJ",
     coverArt: "/covers/fly-away.jpg",
+    lyrics: `Fly away from everybody everybody has to die anyway
+I am broken I have chosen to lie in my grave
+
+Bring me a bottle hand me a gun
+I'm sick of living this life's not fun
+Scared to keep trying cause thats all that I've done
+And the silence it kills me so I always run
+
+I wanna fly away I wanna leave this place I wanna die today
+Always covered in rain and my vision is gray I can't fucking stay
+
+So let me
+Fly away from everybody everybody has to die anyway
+I am broken I have chosen to lie in my grave.`,
   },
   {
     title: "I Don't Wanna Go",
