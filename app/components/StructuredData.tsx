@@ -19,6 +19,9 @@ export default function StructuredData() {
       name: r.title,
       datePublished: r.year,
       url: r.url,
+      ...(r.coverArt
+        ? { image: `https://lobusmusic.com${r.coverArt}` }
+        : {}),
     })),
   };
 

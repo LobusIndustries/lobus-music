@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { discography } from "@/lib/discography";
 
@@ -18,6 +19,18 @@ export default function Discography() {
           <span className="w-8 shrink-0 font-mono text-sm text-white/30 mix-blend-difference">
             {String(i + 1).padStart(2, "0")}
           </span>
+
+          {release.coverArt ? (
+            <Image
+              src={release.coverArt}
+              alt={`${release.title} cover art`}
+              width={48}
+              height={48}
+              className="h-12 w-12 shrink-0 rounded-md object-cover shadow-lg shadow-black/40"
+            />
+          ) : (
+            <div className="h-12 w-12 shrink-0 rounded-md bg-white/5" />
+          )}
 
           <span className="relative flex-1 truncate">
             <span className="text-xl font-bold tracking-tight text-white transition-transform duration-200 group-hover:-translate-x-[2px] sm:text-2xl">

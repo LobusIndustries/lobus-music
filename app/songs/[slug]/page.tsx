@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -70,6 +71,9 @@ export default async function SongPage({
     },
     datePublished: release.year,
     url: `https://lobusmusic.com/songs/${release.slug}`,
+    ...(release.coverArt
+      ? { image: `https://lobusmusic.com${release.coverArt}` }
+      : {}),
     ...(release.lyrics
       ? {
           recordingOf: {
@@ -100,6 +104,19 @@ export default async function SongPage({
             &larr; LOBUS
           </Link>
         </Reveal>
+
+        {release.coverArt && (
+          <Reveal delay={40}>
+            <Image
+              src={release.coverArt}
+              alt={`${release.title} cover art`}
+              width={300}
+              height={300}
+              priority
+              className="mb-8 aspect-square w-full max-w-[280px] rounded-2xl object-cover shadow-2xl shadow-black/60"
+            />
+          </Reveal>
+        )}
 
         <Reveal delay={80}>
           <h1 className="text-[clamp(2.5rem,9vw,5rem)] font-black uppercase leading-[0.95] tracking-tight text-white mix-blend-difference">

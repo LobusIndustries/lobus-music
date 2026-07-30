@@ -8,6 +8,8 @@ export interface Release {
   presaveLabel?: string;
   /** Full lyrics, plain text with line breaks. Added per-song as available. */
   lyrics?: string;
+  /** Cover art, /covers/{slug}.jpg. Sourced from Spotify's oEmbed thumbnail. */
+  coverArt?: string;
 }
 
 // Sourced from https://open.spotify.com/artist/1ac1KQ6uUiOnXTau8cfJeb, keep in
@@ -19,6 +21,7 @@ export const discography: Release[] = [
     type: "Single",
     year: "2026",
     url: "https://distrokid.com/hyperfollow/lobus1/fucked-up-with-the-flu",
+    coverArt: "/covers/fucked-up-with-the-flu.png",
     presave: true,
     presaveLabel: "Aug 31",
   },
@@ -28,6 +31,7 @@ export const discography: Release[] = [
     type: "Single",
     year: "2026",
     url: "https://open.spotify.com/album/0YSYezpAEF9lwNbjX9clHv",
+    coverArt: "/covers/nevermore.jpg",
   },
   {
     title: "Fly Away",
@@ -35,6 +39,7 @@ export const discography: Release[] = [
     type: "Single",
     year: "2025",
     url: "https://open.spotify.com/album/6oePThndVbG1jXPe76srqJ",
+    coverArt: "/covers/fly-away.jpg",
   },
   {
     title: "I Don't Wanna Go",
@@ -42,6 +47,7 @@ export const discography: Release[] = [
     type: "Single",
     year: "2024",
     url: "https://open.spotify.com/album/4nVRjVragKa5d71JPzYkgT",
+    coverArt: "/covers/i-dont-wanna-go.jpg",
   },
   {
     title: "Heartbeat",
@@ -49,6 +55,7 @@ export const discography: Release[] = [
     type: "Single",
     year: "2023",
     url: "https://open.spotify.com/album/2aACz6FZHcZbFbE4LBV8c4",
+    coverArt: "/covers/heartbeat.jpg",
   },
   {
     title: "Shitty Summer",
@@ -56,6 +63,7 @@ export const discography: Release[] = [
     type: "EP",
     year: "2023",
     url: "https://open.spotify.com/album/4uykhlJd6KFds8lPDc5Fn9",
+    coverArt: "/covers/shitty-summer.jpg",
   },
   {
     title: "Last Night",
@@ -63,6 +71,7 @@ export const discography: Release[] = [
     type: "Single",
     year: "2023",
     url: "https://open.spotify.com/album/0uaTveG96x8EJXttdwTsN7",
+    coverArt: "/covers/last-night.jpg",
   },
   {
     title: "I Hate",
@@ -70,6 +79,7 @@ export const discography: Release[] = [
     type: "Single",
     year: "2023",
     url: "https://open.spotify.com/album/69FPResKs4jb9D0i6J7zUA",
+    coverArt: "/covers/i-hate.jpg",
   },
   {
     title: "Love My Pain",
@@ -77,6 +87,7 @@ export const discography: Release[] = [
     type: "Single",
     year: "2023",
     url: "https://open.spotify.com/album/4WG0cQ2dv5pOnlo0Tw8kvx",
+    coverArt: "/covers/love-my-pain.jpg",
   },
   {
     title: "Stranger",
@@ -84,6 +95,7 @@ export const discography: Release[] = [
     type: "Single",
     year: "2023",
     url: "https://open.spotify.com/album/0xdz0OqHxPqGqxlPTneuMD",
+    coverArt: "/covers/stranger.jpg",
   },
 ];
 
