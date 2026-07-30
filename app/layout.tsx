@@ -26,7 +26,7 @@ const siteDescription = `LOBUS. ${soundDescription} Stream on Spotify, SoundClou
 export const metadata: Metadata = {
   metadataBase: new URL("https://lobusmusic.com"),
   title: {
-    default: "LOBUS",
+    default: "LOBUS | Alternative Rock, Emo & Indie Artist",
     template: "%s · LOBUS",
   },
   description: siteDescription,
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     canonical: "https://lobusmusic.com",
   },
   openGraph: {
-    title: "LOBUS",
+    title: "LOBUS | Alternative Rock, Emo & Indie Artist",
     description: siteDescription,
     type: "website",
     siteName: "LOBUS",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LOBUS",
+    title: "LOBUS | Alternative Rock, Emo & Indie Artist",
     description: siteDescription,
   },
   robots: {
