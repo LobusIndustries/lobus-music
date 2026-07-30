@@ -6,7 +6,28 @@ import Discography from "./components/Discography";
 import FAQ from "./components/FAQ";
 import Reveal from "./components/Reveal";
 
-const TICKER_WORDS = ["LOBUS", "NEW MUSIC OUT NOW", "STREAM EVERYWHERE", "LOBUS"];
+const TICKER_WORDS_1 = [
+  "LOBUS",
+  "NEW MUSIC OUT NOW",
+  "ALTERNATIVE ROCK",
+  "EMO",
+  "INDIE",
+  "POST-GRUNGE",
+];
+const TICKER_WORDS_2 = [
+  "LOBUS",
+  "LISTEN ON SPOTIFY",
+  "LISTEN ON APPLE MUSIC",
+  "LISTEN ON SOUNDCLOUD",
+  "STREAM EVERYWHERE",
+];
+const TICKER_WORDS_3 = [
+  "LOBUS",
+  "INDEPENDENT ARTIST",
+  "FOLLOW ON INSTAGRAM",
+  "FOLLOW ON TIKTOK",
+  "WATCH ON YOUTUBE",
+];
 
 export default function Home() {
   return (
@@ -38,7 +59,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <Marquee items={TICKER_WORDS} />
+      <Marquee items={TICKER_WORDS_1} speed={28} delay={-6} />
 
       <section
         id="discography"
@@ -54,7 +75,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <Marquee items={TICKER_WORDS} reverse speed={25} />
+      <Marquee items={TICKER_WORDS_2} reverse speed={25} delay={-14} />
 
       <section
         id="links"
@@ -70,7 +91,7 @@ export default function Home() {
         </Reveal>
       </section>
 
-      <Marquee items={TICKER_WORDS} reverse speed={22} />
+      <Marquee items={TICKER_WORDS_3} reverse speed={22} delay={-3} />
 
       <section
         id="faq"
