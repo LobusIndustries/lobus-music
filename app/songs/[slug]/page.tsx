@@ -7,6 +7,7 @@ import {
   getReleaseBySlug,
   getSpotifyAlbumId,
 } from "@/lib/discography";
+import { getPostBySongSlug } from "@/lib/blog";
 import Reveal from "@/app/components/Reveal";
 import LinksGrid from "@/app/components/LinksGrid";
 
@@ -59,6 +60,7 @@ export default async function SongPage({
   if (!release) notFound();
 
   const spotifyId = getSpotifyAlbumId(release.url);
+  const relatedPost = getPostBySongSlug(release.slug);
 
   const musicRecording = {
     "@context": "https://schema.org",
@@ -162,6 +164,18 @@ export default async function SongPage({
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             />
+          </Reveal>
+        )}
+
+        {relatedPost && (
+          <Reveal delay={300} className="mt-8">
+            <Link
+              href={`/blog/${relatedPost.slug}`}
+              className="inline-flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-white"
+            >
+              Read the story behind this song
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
           </Reveal>
         )}
 

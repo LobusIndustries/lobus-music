@@ -48,6 +48,35 @@ export const discography: Release[] = [
     year: "2024",
     url: "https://open.spotify.com/album/4nVRjVragKa5d71JPzYkgT",
     coverArt: "/covers/i-dont-wanna-go.jpg",
+    lyrics: `I don't wanna go with you tonight
+I just wanna stay in my room and get high
+Fucking with my mind while I drive tonight
+Speeding down the road with the flashing
+
+Fucked up right now I drank a bottle
+I don't really wanna think about tomorrow
+Look me in my eyes you'll feel my sorrow
+I don't wanna talk I'll talk to myself
+
+I don't really wanna run away forever
+Fucked up everyday to feel better
+Feeling cold everyday in the summer
+My depression never getting better
+
+I don't wanna go with you tonight
+I just wanna stay in my room and get high
+Fucking with my mind while I drive tonight
+Speeding down the road with the flashing
+
+Fucked up right now I drank a bottle
+I don't really wanna think about tomorrow
+Look me in my eyes you'll feel my sorrow
+I don't wanna talk I'll talk to myself
+
+I don't really wanna run away forever
+Fucked up everyday to feel better
+Feeling cold everyday in the summer
+My depression never getting better`,
   },
   {
     title: "Heartbeat",

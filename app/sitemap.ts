@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { discography } from "@/lib/discography";
+import { blogPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -20,6 +21,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
+    })),
+    {
+      url: "https://lobusmusic.com/blog",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    ...blogPosts.map((post) => ({
+      url: `https://lobusmusic.com/blog/${post.slug}`,
+      lastModified: post.date,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     })),
   ];
 }
