@@ -73,7 +73,7 @@ I gotta go and find my soul
 I'm on a roll
 I lost control
 I gotta go
-I gotta go.`,
+I gotta go`,
   },
   {
     title: "Fly Away",
@@ -95,7 +95,7 @@ Always covered in rain and my vision is gray I can't fucking stay
 
 So let me
 Fly away from everybody everybody has to die anyway
-I am broken I have chosen to lie in my grave.`,
+I am broken I have chosen to lie in my grave`,
   },
   {
     title: "I Don't Wanna Go",
