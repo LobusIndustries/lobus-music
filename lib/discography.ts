@@ -23,7 +23,7 @@ export const discography: Release[] = [
     type: "Single",
     year: "2026",
     url: "https://distrokid.com/hyperfollow/lobus1/fucked-up-with-the-flu",
-    coverArt: "/covers/fucked-up-with-the-flu.png",
+    coverArt: "/covers/fucked-up-with-the-flu.jpg",
     presave: true,
     presaveLabel: "Aug 31",
   },

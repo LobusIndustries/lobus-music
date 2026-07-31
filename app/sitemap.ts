@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { discography } from "@/lib/discography";
 import { blogPosts } from "@/lib/blog";
 import { shittySummerTracks } from "@/lib/shittySummerTracks";
+import { putMeDownTracks } from "@/lib/putMeDownTracks";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -25,6 +26,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...shittySummerTracks.map((track) => ({
       url: `https://lobusmusic.com/songs/shitty-summer/${track.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.65,
+    })),
+    ...putMeDownTracks.map((track) => ({
+      url: `https://lobusmusic.com/songs/put-me-down/${track.slug}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.65,

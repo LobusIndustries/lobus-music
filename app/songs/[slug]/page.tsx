@@ -9,6 +9,7 @@ import {
 } from "@/lib/discography";
 import { getPostBySongSlug } from "@/lib/blog";
 import { shittySummerTracks } from "@/lib/shittySummerTracks";
+import { putMeDownTracks } from "@/lib/putMeDownTracks";
 import Reveal from "@/app/components/Reveal";
 import LinksGrid from "@/app/components/LinksGrid";
 
@@ -62,6 +63,12 @@ export default async function SongPage({
 
   const spotifyId = getSpotifyAlbumId(release.url);
   const relatedPost = getPostBySongSlug(release.slug);
+  const epTracks =
+    release.slug === "shitty-summer"
+      ? shittySummerTracks
+      : release.slug === "put-me-down"
+        ? putMeDownTracks
+        : null;
 
   const musicRecording = {
     "@context": "https://schema.org",
@@ -185,16 +192,16 @@ export default async function SongPage({
           </Reveal>
         )}
 
-        {release.slug === "shitty-summer" && (
+        {epTracks && (
           <Reveal delay={285} className="mt-12">
             <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-white/40 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
               Tracklist
             </h2>
             <div className="w-full">
-              {shittySummerTracks.map((track, i) => (
+              {epTracks.map((track, i) => (
                 <Link
                   key={track.slug}
-                  href={`/songs/shitty-summer/${track.slug}`}
+                  href={`/songs/${release.slug}/${track.slug}`}
                   className="group flex items-center gap-4 border-b border-white/10 py-4 first:border-t"
                 >
                   <span className="w-6 shrink-0 font-mono text-sm text-white/30">
