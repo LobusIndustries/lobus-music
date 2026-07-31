@@ -1,14 +1,14 @@
 import { ImageResponse } from "next/og";
 
-export const size = { width: 32, height: 32 };
+export const size = { width: 48, height: 48 };
 export const contentType = "image/png";
 
 const blobs = [
-  { color: "#8b5cf6", left: 0, top: 2, w: 20, h: 20 },
-  { color: "#22c55e", left: 16, top: 0, w: 18, h: 18 },
-  { color: "#2563eb", left: -2, top: 16, w: 20, h: 20 },
-  { color: "#f97316", left: 14, top: 14, w: 20, h: 20 },
-  { color: "#ec4899", left: 8, top: 8, w: 18, h: 18 },
+  { color: "#8b5cf6", left: 0, top: 3, w: 30, h: 30 },
+  { color: "#22c55e", left: 24, top: 0, w: 27, h: 27 },
+  { color: "#2563eb", left: -3, top: 24, w: 30, h: 30 },
+  { color: "#f97316", left: 21, top: 21, w: 30, h: 30 },
+  { color: "#ec4899", left: 12, top: 12, w: 27, h: 27 },
 ];
 
 export default function Icon() {
@@ -37,7 +37,7 @@ export default function Icon() {
               height: b.h,
               borderRadius: 9999,
               background: b.color,
-              filter: "blur(5px)",
+              filter: "blur(8px)",
               opacity: 1,
             }}
           />
@@ -54,10 +54,10 @@ export default function Icon() {
           style={{
             position: "relative",
             color: "#ffffff",
-            fontSize: 22,
+            fontSize: 33,
             fontWeight: 700,
             fontFamily: "sans-serif",
-            textShadow: "0 1px 3px rgba(0,0,0,0.8)",
+            textShadow: "0 2px 5px rgba(0,0,0,0.8)",
           }}
         >
           L
