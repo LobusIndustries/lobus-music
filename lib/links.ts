@@ -39,8 +39,8 @@ export const links: PlatformLink[] = [
   {
     key: "youtube",
     label: "YouTube",
-    handle: "@Lobus",
-    url: "https://www.youtube.com/@Lobus",
+    handle: "@Lobus.",
+    url: "https://www.youtube.com/@lobus.",
     color: "#FF0000",
   },
   {

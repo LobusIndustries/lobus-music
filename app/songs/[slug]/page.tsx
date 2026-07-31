@@ -90,12 +90,29 @@ export default async function SongPage({
       : {}),
   };
 
+  const videoObject = release.youtubeId
+    ? {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: `${release.title} (Official Music Video)`,
+        description: `Official music video for "${release.title}" by LOBUS.`,
+        thumbnailUrl: `https://i.ytimg.com/vi/${release.youtubeId}/hqdefault.jpg`,
+        embedUrl: `https://www.youtube.com/embed/${release.youtubeId}`,
+      }
+    : null;
+
   return (
     <main className="relative z-10 flex flex-1 flex-col items-center px-6 py-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(musicRecording) }}
       />
+      {videoObject && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoObject) }}
+        />
+      )}
 
       <div className="w-full max-w-2xl">
         <Reveal>
@@ -164,6 +181,26 @@ export default async function SongPage({
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             />
+          </Reveal>
+        )}
+
+        {release.youtubeId && (
+          <Reveal delay={290} className="mt-8">
+            <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-white/40 [text-shadow:0_1px_8px_rgba(0,0,0,0.8)]">
+              Music Video
+            </h2>
+            <div className="aspect-video overflow-hidden rounded-2xl">
+              <iframe
+                title={`${release.title} (Official Music Video)`}
+                src={`https://www.youtube.com/embed/${release.youtubeId}`}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
           </Reveal>
         )}
 

@@ -10,6 +10,8 @@ export interface Release {
   lyrics?: string;
   /** Cover art, /covers/{slug}.jpg. Sourced from Spotify's oEmbed thumbnail. */
   coverArt?: string;
+  /** YouTube video ID for the official music video, from youtube.com/@lobus. */
+  youtubeId?: string;
 }
 
 // Sourced from https://open.spotify.com/artist/1ac1KQ6uUiOnXTau8cfJeb, keep in
@@ -32,6 +34,7 @@ export const discography: Release[] = [
     year: "2026",
     url: "https://open.spotify.com/album/0YSYezpAEF9lwNbjX9clHv",
     coverArt: "/covers/nevermore.jpg",
+    youtubeId: "SQb3wfBGLjs",
     lyrics: `Nevermore that you want to go
 Fall apart at the front door
 Legs collapse you don't want it though
@@ -82,6 +85,7 @@ I gotta go`,
     year: "2025",
     url: "https://open.spotify.com/album/6oePThndVbG1jXPe76srqJ",
     coverArt: "/covers/fly-away.jpg",
+    youtubeId: "zb4GCPsgegk",
     lyrics: `Fly away from everybody everybody has to die anyway
 I am broken I have chosen to lie in my grave
 
@@ -141,6 +145,7 @@ My depression never getting better`,
     year: "2023",
     url: "https://open.spotify.com/album/2aACz6FZHcZbFbE4LBV8c4",
     coverArt: "/covers/heartbeat.jpg",
+    youtubeId: "OV5YeXt2uDg",
   },
   {
     title: "Shitty Summer",
@@ -157,6 +162,7 @@ My depression never getting better`,
     year: "2023",
     url: "https://open.spotify.com/album/0uaTveG96x8EJXttdwTsN7",
     coverArt: "/covers/last-night.jpg",
+    youtubeId: "T1KmBkyF54o",
   },
   {
     title: "I Hate",
@@ -165,6 +171,7 @@ My depression never getting better`,
     year: "2023",
     url: "https://open.spotify.com/album/69FPResKs4jb9D0i6J7zUA",
     coverArt: "/covers/i-hate.jpg",
+    youtubeId: "N6GE7AUDdQM",
   },
   {
     title: "Love My Pain",
@@ -173,6 +180,7 @@ My depression never getting better`,
     year: "2023",
     url: "https://open.spotify.com/album/4WG0cQ2dv5pOnlo0Tw8kvx",
     coverArt: "/covers/love-my-pain.jpg",
+    youtubeId: "yQdV0rTyTpk",
   },
   {
     title: "Stranger",
