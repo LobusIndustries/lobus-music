@@ -1,11 +1,20 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { discography } from "@/lib/discography";
 
+const VISIBLE_COUNT = 10;
+
 export default function Discography() {
+  const [expanded, setExpanded] = useState(false);
+  const visible = expanded ? discography : discography.slice(0, VISIBLE_COUNT);
+  const hiddenCount = discography.length - VISIBLE_COUNT;
+
   return (
     <div className="w-full max-w-3xl">
-      {discography.map((release, i) => (
+      {visible.map((release, i) => (
         <Link
           key={release.slug}
           href={`/songs/${release.slug}`}
@@ -60,6 +69,21 @@ export default function Discography() {
           </span>
         </Link>
       ))}
+
+      {!expanded && hiddenCount > 0 && (
+        <div className="flex justify-center pt-6">
+          <button
+            type="button"
+            onClick={() => setExpanded(true)}
+            className="group flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-2 text-sm font-semibold uppercase tracking-widest text-white/70 backdrop-blur-sm transition-colors hover:border-[#ff2e63]/50 hover:text-white"
+          >
+            See More
+            <span className="transition-transform duration-200 group-hover:translate-y-0.5">
+              &#8595;
+            </span>
+          </button>
+        </div>
+      )}
     </div>
   );
 }
