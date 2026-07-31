@@ -22,7 +22,7 @@ export default function SoundToggle() {
       onClick={toggle}
       aria-pressed={on}
       aria-label={on ? "Mute ambient sound" : "Play ambient sound"}
-      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:border-white/40"
+      className="fixed top-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:border-white/40"
       style={{ boxShadow: on ? "0 0 30px rgba(255,46,99,0.55)" : "none" }}
     >
       {on ? (
