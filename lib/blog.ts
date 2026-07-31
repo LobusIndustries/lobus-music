@@ -25,7 +25,7 @@ I put it into a song because that was the only way I knew how to get it out. If 
   {
     slug: "the-story-behind-nevermore",
     title: `The Story Behind "Nevermore"`,
-    date: "2026-07-30",
+    date: "2026-07-14",
     excerpt:
       "On being scared to let someone in, and choosing to try anyway.",
     songSlug: "nevermore",
@@ -38,7 +38,7 @@ I did end up getting with her anyway, and I'm still with her now. Writing this s
   {
     slug: "the-story-behind-fly-away",
     title: `The Story Behind "Fly Away"`,
-    date: "2026-07-30",
+    date: "2026-06-28",
     excerpt: "On not wanting to be here anymore.",
     songSlug: "fly-away",
     body: `"Fly Away" is about not wanting to be here anymore. It's the most direct song I've written about wanting to end it all, not feeling accepted, not feeling heard, not feeling loved, and just wanting the pain to stop.
