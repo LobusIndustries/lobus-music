@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { discography } from "@/lib/discography";
 import { blogPosts } from "@/lib/blog";
+import { shittySummerTracks } from "@/lib/shittySummerTracks";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -21,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.7,
+    })),
+    ...shittySummerTracks.map((track) => ({
+      url: `https://lobusmusic.com/songs/shitty-summer/${track.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.65,
     })),
     {
       url: "https://lobusmusic.com/blog",

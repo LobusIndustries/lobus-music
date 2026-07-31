@@ -190,6 +190,23 @@ My depression never getting better`,
     url: "https://open.spotify.com/album/0xdz0OqHxPqGqxlPTneuMD",
     coverArt: "/covers/stranger.jpg",
   },
+  {
+    title: "Tear Me Apart",
+    slug: "tear-me-apart",
+    type: "Single",
+    year: "2023",
+    url: "https://open.spotify.com/album/2dJANpSMlABYDj7JyuT67V",
+    coverArt: "/covers/tear-me-apart.jpg",
+  },
+  {
+    title: "lightning Strike",
+    slug: "lightning-strike",
+    type: "Single",
+    year: "2023",
+    url: "https://open.spotify.com/album/4GHEPVonvzd7UHIGGnegb1",
+    coverArt: "/covers/lightning-strike.jpg",
+    youtubeId: "_MR2C32htF0",
+  },
 ];
 
 export function getReleaseBySlug(slug: string): Release | undefined {
