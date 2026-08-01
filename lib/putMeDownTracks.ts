@@ -4,6 +4,8 @@ export interface EpTrack {
   spotifyTrackId: string;
   feature?: string;
   youtubeId?: string;
+  /** ISO 8601 upload date of the YouTube video, for VideoObject structured data. Required whenever youtubeId is set. */
+  videoUploadDate?: string;
   /** Full lyrics, plain text with line breaks. Added per-track as available. */
   lyrics?: string;
 }

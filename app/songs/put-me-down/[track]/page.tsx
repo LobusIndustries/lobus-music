@@ -98,6 +98,7 @@ export default async function EpTrackPage({
         description: `Official music video for "${track.title}" by LOBUS.`,
         thumbnailUrl: `https://i.ytimg.com/vi/${track.youtubeId}/hqdefault.jpg`,
         embedUrl: `https://www.youtube.com/embed/${track.youtubeId}`,
+        uploadDate: track.videoUploadDate,
       }
     : null;
 

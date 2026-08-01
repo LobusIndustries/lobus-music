@@ -106,6 +106,7 @@ export default async function SongPage({
         description: `Official music video for "${release.title}" by LOBUS.`,
         thumbnailUrl: `https://i.ytimg.com/vi/${release.youtubeId}/hqdefault.jpg`,
         embedUrl: `https://www.youtube.com/embed/${release.youtubeId}`,
+        uploadDate: release.videoUploadDate,
       }
     : null;
 

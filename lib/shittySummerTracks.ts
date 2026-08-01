@@ -4,6 +4,8 @@ export interface EpTrack {
   spotifyTrackId: string;
   feature?: string;
   youtubeId?: string;
+  /** ISO 8601 upload date of the YouTube video, for VideoObject structured data. Required whenever youtubeId is set. */
+  videoUploadDate?: string;
   /** Full lyrics, plain text with line breaks. Added per-track as available. */
   lyrics?: string;
 }
@@ -22,6 +24,7 @@ export const shittySummerTracks: EpTrack[] = [
     spotifyTrackId: "4Y254OrDpAQdmqAGPHivm6",
     feature: "Lil Rav",
     youtubeId: "HETd3-Fmm_w",
+    videoUploadDate: "2023-10-16T09:07:59-07:00",
   },
   {
     title: "Lost Souls",
@@ -41,6 +44,7 @@ export const shittySummerTracks: EpTrack[] = [
     spotifyTrackId: "5UUvwl4fK6C1evk2405ynE",
     feature: "Lil Rav",
     youtubeId: "USUE_2hjae4",
+    videoUploadDate: "2023-10-16T09:07:59-07:00",
   },
 ];
 

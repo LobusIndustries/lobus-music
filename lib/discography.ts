@@ -12,6 +12,8 @@ export interface Release {
   coverArt?: string;
   /** YouTube video ID for the official music video, from youtube.com/@lobus. */
   youtubeId?: string;
+  /** ISO 8601 upload date of the YouTube video, for VideoObject structured data. Required whenever youtubeId is set. */
+  videoUploadDate?: string;
 }
 
 // Sourced from https://open.spotify.com/artist/1ac1KQ6uUiOnXTau8cfJeb, keep in
@@ -35,6 +37,7 @@ export const discography: Release[] = [
     url: "https://open.spotify.com/album/0YSYezpAEF9lwNbjX9clHv",
     coverArt: "/covers/nevermore.jpg",
     youtubeId: "SQb3wfBGLjs",
+    videoUploadDate: "2026-01-31T02:02:06-08:00",
     lyrics: `Nevermore that you want to go
 Fall apart at the front door
 Legs collapse you don't want it though
@@ -86,6 +89,7 @@ I gotta go`,
     url: "https://open.spotify.com/album/6oePThndVbG1jXPe76srqJ",
     coverArt: "/covers/fly-away.jpg",
     youtubeId: "zb4GCPsgegk",
+    videoUploadDate: "2025-07-17T03:03:15-07:00",
     lyrics: `Fly away from everybody everybody has to die anyway
 I am broken I have chosen to lie in my grave
 
@@ -146,6 +150,7 @@ My depression never getting better`,
     url: "https://open.spotify.com/album/2aACz6FZHcZbFbE4LBV8c4",
     coverArt: "/covers/heartbeat.jpg",
     youtubeId: "OV5YeXt2uDg",
+    videoUploadDate: "2023-12-19T02:03:52-08:00",
   },
   {
     title: "Shitty Summer",
@@ -163,6 +168,7 @@ My depression never getting better`,
     url: "https://open.spotify.com/album/0uaTveG96x8EJXttdwTsN7",
     coverArt: "/covers/last-night.jpg",
     youtubeId: "T1KmBkyF54o",
+    videoUploadDate: "2023-09-14T03:02:05-07:00",
   },
   {
     title: "I Hate",
@@ -172,6 +178,7 @@ My depression never getting better`,
     url: "https://open.spotify.com/album/69FPResKs4jb9D0i6J7zUA",
     coverArt: "/covers/i-hate.jpg",
     youtubeId: "N6GE7AUDdQM",
+    videoUploadDate: "2023-08-13T00:28:33-07:00",
   },
   {
     title: "Love My Pain",
@@ -181,6 +188,7 @@ My depression never getting better`,
     url: "https://open.spotify.com/album/4WG0cQ2dv5pOnlo0Tw8kvx",
     coverArt: "/covers/love-my-pain.jpg",
     youtubeId: "yQdV0rTyTpk",
+    videoUploadDate: "2023-08-13T12:54:01-07:00",
   },
   {
     title: "Stranger",
@@ -230,6 +238,7 @@ My depression never getting better`,
     url: "https://open.spotify.com/album/4GHEPVonvzd7UHIGGnegb1",
     coverArt: "/covers/lightning-strike.jpg",
     youtubeId: "_MR2C32htF0",
+    videoUploadDate: "2023-08-10T16:03:58-07:00",
   },
   {
     title: "All Night",
